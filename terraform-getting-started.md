@@ -1,25 +1,47 @@
 # Getting Started with Terraform
 
-Terraform is the most popular langauge for defining and provisioning infrastructure as code (IaC).
+## Learning Objectives
 
-To install Terraform, simply visit [Terraform.io](https://www.terraform.io/downloads.html) and download the compressed binary application executable file deliverable for your platform, machine or environment on which you like to run code and do development.
+After completing this tutorial, you will learn to:
 
-With Terraform installed, let's dive right into it and start creating some infrastructure.
+- Describe downloading and installing Terraform
+- Perform creating infrastructure
+- Verify an infrastructure installation
+- Perform destroying infrastructure
 
-Most guys find it easiest to create a new directory on there local machine and create Terraform configuration code inside it.
+## Prerequisites
+
+- A computer with an internet connection
+- A hard drive with at least 80mb of free space
+- An unzip utility
+
+
+## Install Terraform
+
+Terraform is the most popular language for defining and provisioning infrastructure as code (IaC).
+
+To install Terraform, find the [appropriate package](https://www.terraform.io/downloads.html) for your system and download the file.
+
+## Create infrastructure
+
+Now that you've installed Terraform, you can now start creating infrastructure.
+
+Create a new directory named `terraform-demo`.
+
+Then change directory to `terraform-demo`.
 
 ```shell
 $ mkdir terraform-demo
 $ cd terraform-demo
 ```
 
-Next, create a file for your Terraform configuration code.
+Next, create a file and name it `main.tf`.
 
 ```shell
 $ touch main.tf
 ```
 
-Paste the following lines into the file.
+Paste the following Terraform configuration into the file `main.tf`.
 
 ```hcl
 terraform {
@@ -45,25 +67,39 @@ resource "docker_image" "nginx" {
 }
 ```
 
-Initialize Terraform with the `init` command. The AWS provider will be installed. 
+Initialize Terraform with the `init` command, which installs the NGINX server container.
 
 ```shell
 $ terraform init
 ```
 
-You shoud check for any errors. If it ran successfully, provision the resource with the `apply` command.
+## Verify the installation
+
+Check for any errors. If successful, provision the resource with `apply`.
 
 ```shell
 $ terraform apply
 ```
 
-The command will take up to a few minutes to run and will display a message indicating that the resource was created.
+The command will take a few minutes to run and will display a message indicating that the resource was created.
 
-Finally, destroy the infrastructure.
+## Destroy infrastructure
+
+To destroy the infrastructure, run `terraform destroy`.
 
 ```shell
 $ terraform destroy
 ```
 
-Look for a message are the bottom of the output asking for confirmation. Type `yes` and hit ENTER. Terraform will destroy the resources it had created earlier.
+When Terraform asks you to confirm type `yes` and press `ENTER`.
 
+You've now provisioned and destroyed an NGINX webserver with Terraform.
+
+## Next Steps
+
+Next, you will create real infrastructure in the cloud of your choice.
+
+- [Amazon Web Services (AWS)](https://learn.hashicorp.com/tutorials/terraform/aws-build)
+- [Azure](https://learn.hashicorp.com/tutorials/terraform/azure-build)
+- [Google Cloud Platform (GCP)](https://learn.hashicorp.com/tutorials/terraform/google-cloud-platform-build)
+- [Oracle Cloud Platform (OCI)](https://learn.hashicorp.com/tutorials/terraform/oci-build)
