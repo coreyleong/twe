@@ -102,4 +102,4 @@ Next, you will create real infrastructure in the cloud of your choice.
 - [Amazon Web Services (AWS)](https://learn.hashicorp.com/tutorials/terraform/aws-build)
 - [Azure](https://learn.hashicorp.com/tutorials/terraform/azure-build)
 - [Google Cloud Platform (GCP)](https://learn.hashicorp.com/tutorials/terraform/google-cloud-platform-build)
-- [Oracle Cloud Platform (OCI)(https://learn.hashicorp.com/tutorials/terraform/oci-build)
+- [Oracle Cloud Platform (OCI)](https://learn.hashicorp.com/tutorials/terraform/oci-build)
